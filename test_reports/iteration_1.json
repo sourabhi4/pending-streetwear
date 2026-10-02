@@ -1,0 +1,70 @@
+{
+  "iteration": 1,
+  "summary": "All 8 UI-facing acceptance criteria exercised via named browser checks. All passed. No backend test artifacts required (no product/cart/checkout API exists by design; backend only serves template /api/status).",
+  "passed": 8,
+  "failed": 0,
+  "flaky": 0,
+  "blocked": 0,
+  "test_error": 0,
+  "retest_needed": false,
+  "bugs": [],
+  "action_items": [],
+  "checks": [
+    {
+      "criterion": "Editorial hero renders 'QUESTION EVERYTHING.' fully visible with zero horizontal overflow on desktop AND 375px mobile",
+      "name": "hero-no-overflow",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Heading 'QUESTION EVERYTHING.' visible at 1280x720 and 375x800; document.scrollWidth - clientWidth <= 1px on both viewports; also verified against public preview URL https://chaos-wear-3.preview.emergentagent.com"
+    },
+    {
+      "criterion": "Sticky header nav routes to category pages with filter pre-selected; quick-add bumps bag count badge",
+      "name": "header-nav-category-pages-and-bag-count",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Visited /shop/scams, /shop/system, /shop/india, /shop/corporate, /shop/limited-drops, /lookbook; each category chip had aria-pressed=true and product-grid rendered; header-cart-count went 0 -> 1 after quick-add on 100% GENUINE"
+    },
+    {
+      "criterion": "LIVE DROP quick add -> size modal -> cart drawer with line item, size, price, free-shipping progress bar",
+      "name": "live-drop-quick-add-flow",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "cart-line-p01-M shows 'SCAM DETECTED', 'SIZE: M', '\u20b91,799'; cart-shipping-progress text contains 'AWAY FROM FREE SHIPPING'"
+    },
+    {
+      "criterion": "Shop filters (category/type/size/price/availability) and sort narrow grid; sold-out product shows sold-out state",
+      "name": "shop-filters-and-sort",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Availability=SOLD OUT filter returned exactly 1 product (product-card-file-not-found), shop-product-count showed '1 PRODUCT'; sort price-asc placed product-card-otp-123456 (\u20b9299, cheapest) first"
+    },
+    {
+      "criterion": "PDP: bare ADD TO BAG shows SIZE REQUIRED error and does not add; size selection + add opens drawer; BUY NOW -> /checkout; size guide dialog; related products render",
+      "name": "pdp-add-to-bag-and-buy-now",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Toast 'SIZE REQUIRED' shown on bare add, cart-drawer-root count stayed 0; after selecting size L, cart-line-p01-L appeared; size-guide-dialog showed CHEST (IN) column; related-products article rendered; buy-now navigated to /checkout (checkout-root visible)"
+    },
+    {
+      "criterion": "Cart persists across reload; qty stepper/remove work",
+      "name": "cart-persists-reload-and-qty-controls",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "After adding JUGAAD size S and reloading, header-cart-count stayed '1' and cart-line-p11-S + subtotal '1,699' visible in drawer; minus-to-zero removed the line and showed 'YOUR BAG IS EMPTY.'"
+    },
+    {
+      "criterion": "Demo checkout PAY processes then shows order-confirmed with order number and PAID == checkout total; cart cleared afterwards",
+      "name": "checkout-pay-flow-order-confirmed",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "order-number matched /^PND-2026-\\d{6}$/; order-paid text equal to pre-pay checkout-total; header-cart-count became '0'; /checkout afterward showed 'NOTHING TO CHECKOUT' empty state"
+    },
+    {
+      "criterion": "'/' hotkey opens search overlay; typing 'scam' lists both products; result click navigates; /lookbook, /archive (row expand), /manifesto, /help/size-guide render non-blank",
+      "name": "search-overlay-and-static-pages",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "search-overlay opened via '/' key; search-result-scam-detected and search-result-100-percent-genuine both visible for query 'scam'; clicking result navigated to /product/scam-detected; lookbook-root, archive-root (archive-detail-002 expanded), manifesto-root, help-root + help-size-table all rendered"
+    }
+  ]
+}

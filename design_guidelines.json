@@ -1,0 +1,623 @@
+{
+  "project_name": "PENDING™",
+  "archetype": "Neo-brutalist Satirical Editorial Streetwear & Broken Operating System",
+  "colors": {
+    "palette": {
+      "warm_cream": "#F4F1E8",
+      "void_black": "#111111",
+      "pure_black": "#0A0A0A",
+      "signal_red": "#E52A1B",
+      "acid_green": "#D9FF32",
+      "system_border": "#262626",
+      "system_muted_border": "#D8D3C5",
+      "slate_gray": "#7A7870",
+      "light_panel": "#EAE5DA"
+    },
+    "surfaces": [
+      {
+        "name": "page_light",
+        "kind": "solid",
+        "bg": "#F4F1E8",
+        "on_bg": "#111111",
+        "on_bg_muted": "#5C5A54",
+        "roles": {
+          "link": "#111111",
+          "error": "#E52A1B",
+          "success": "#1B873F",
+          "tag": "#E52A1B"
+        }
+      },
+      {
+        "name": "page_dark_manifesto",
+        "kind": "solid",
+        "bg": "#111111",
+        "on_bg": "#F4F1E8",
+        "on_bg_muted": "#A39F93",
+        "roles": {
+          "link": "#D9FF32",
+          "error": "#E52A1B",
+          "success": "#D9FF32"
+        }
+      },
+      {
+        "name": "system_terminal_surface",
+        "kind": "solid",
+        "bg": "#0D0D0D",
+        "on_bg": "#D9FF32",
+        "on_bg_muted": "#8A9468",
+        "roles": {
+          "cursor": "#D9FF32",
+          "warning": "#E52A1B",
+          "highlight": "#FFFFFF"
+        }
+      },
+      {
+        "name": "product_card_light",
+        "kind": "solid",
+        "bg": "#EFECE3",
+        "on_bg": "#111111",
+        "on_bg_muted": "#54524C",
+        "roles": {
+          "badge_limited": "#E52A1B",
+          "badge_acid": "#111111",
+          "price": "#111111"
+        }
+      },
+      {
+        "name": "badge_acid_surface",
+        "kind": "solid",
+        "bg": "#D9FF32",
+        "on_bg": "#111111",
+        "on_bg_muted": "#262626"
+      },
+      {
+        "name": "badge_red_surface",
+        "kind": "solid",
+        "bg": "#E52A1B",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#F4F1E8"
+      },
+      {
+        "name": "cart_drawer_surface",
+        "kind": "solid",
+        "bg": "#161616",
+        "on_bg": "#F4F1E8",
+        "on_bg_muted": "#A8A49A",
+        "roles": {
+          "shipping_bar": "#D9FF32",
+          "checkout_btn": "#D9FF32",
+          "danger": "#E52A1B"
+        }
+      },
+      {
+        "name": "header_sticky_glass",
+        "kind": "glass",
+        "contrast_against": "#F4F1E8",
+        "guarantee": "backdrop-blur-xl bg-[#F4F1E8]/90 border-b border-[#111111]/15",
+        "on_bg": "#111111",
+        "on_bg_muted": "#4A4843"
+      },
+      {
+        "name": "search_modal_overlay",
+        "kind": "glass",
+        "contrast_against": "#111111",
+        "guarantee": "backdrop-blur-2xl bg-black/85 border border-[#333333]",
+        "on_bg": "#F4F1E8",
+        "on_bg_muted": "#888888"
+      },
+      {
+        "name": "hero_editorial_overlay",
+        "kind": "image",
+        "contrast_against": "#0A0A0A",
+        "guarantee": "linear-gradient(to top, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.4) 60%, rgba(17,17,17,0.2) 100%)",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#D8D3C5",
+        "roles": {
+          "tag": "#D9FF32",
+          "accent": "#E52A1B"
+        }
+      }
+    ],
+    "accent": "#E52A1B",
+    "on_accent": "#FFFFFF",
+    "secondary_accent": "#D9FF32",
+    "on_secondary_accent": "#111111"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Space Grotesk Variable, sans-serif",
+      "body": "DM Sans Variable, sans-serif",
+      "mono": "JetBrains Mono Variable, monospace"
+    },
+    "font_imports": [
+      "@import '@fontsource-variable/space-grotesk';",
+      "@import '@fontsource-variable/dm-sans';",
+      "@import '@fontsource-variable/jetbrains-mono';"
+    ],
+    "scale_px": {
+      "display": 60,
+      "h1": 48,
+      "h2": 36,
+      "h3": 24,
+      "body": 16,
+      "caption": 14
+    },
+    "typesetting_rules": {
+      "headlines": "font-bold tracking-tighter uppercase leading-[0.92]",
+      "system_labels": "font-mono text-xs uppercase tracking-widest font-semibold",
+      "editorial_subheads": "font-medium text-lg md:text-xl tracking-tight leading-relaxed text-[#5C5A54]",
+      "badge_text": "font-mono text-[11px] font-bold tracking-wider uppercase px-2 py-0.5",
+      "price_text": "font-mono font-bold tracking-tight text-lg"
+    }
+  },
+  "entry_surfaces": {
+    "/": "editorial split hero with raw typography + live diagnostic ticker, followed by live drop product bento, system simulator, lookbook grid, manifesto, and archive log",
+    "/shop": "high-density neo-brutalist catalog with multi-facet filter rail, live search, quick-add cards, and stock badges",
+    "/shop/:category": "category-filtered streetwear catalog with bespoke satirical category manifesto and stock status",
+    "/product/:slug": "split product studio — multi-angle editorial image stack left, precision purchase console with satirical garment spec & size calculator right",
+    "/lookbook": "full-bleed editorial photo gallery with brutalist camera metadata and cultural Indian satire commentary",
+    "/archive": "terminal database table of deprecated drops (001-004) with redacted reasons and collector status",
+    "/manifesto": "deep black brutalist longform manifesto page with bold typographic statements and system diagnostic footnotes",
+    "/checkout": "minimal single-page mock checkout with UPI / Card tabs, simulated OTP verification, and satirically stamped order-confirmation invoice"
+  },
+  "visual_enhancers": {
+    "borders": "1px and 2px solid #111111 neo-brutalist framing, sharp corners (rounded-none or max rounded-sm)",
+    "textures": "Subtle vintage paper grain, halftone print effect, barcode & stamped graphic watermarks",
+    "badges": "Sticker-style tags: '100% SARCASM GUARANTEED', 'SERVER OVERLOAD', 'LIMITED RUN OF 150', 'TAX INCLUSIVE (UNFORTUNATELY)'",
+    "system_diagnostics": "STATUS: OPERATIONAL [99.8%] | ACCOUNTABILITY: NOT FOUND | LAST UPDATED: IST REAL-TIME",
+    "marquee_ticker": "react-fast-marquee powered slow ticker: 'THE SYSTEM IS WORKING. (PROBABLY.) • NO REFUNDS ON BROKEN PROMISES • 240 GSM HEAVYWEIGHT COTTON • WEAR THE CHAOS • DISPATCHED VIA SPEED POST & PRAYERS'"
+  },
+  "component_hierarchy": [
+    {
+      "name": "Header",
+      "path": "frontend/src/components/layout/Header.tsx",
+      "description": "Sticky top bar with PENDING™ logo, nav links (SCAMS, SYSTEM, INDIA, CORPORATE, LIMITED DROPS, LOOKBOOK, ARCHIVE), search trigger, wishlist counter, cart trigger with live count badge, and top scrolling announcement ribbon."
+    },
+    {
+      "name": "HeroSection",
+      "path": "frontend/src/components/home/HeroSection.tsx",
+      "description": "Massive editorial hero featuring bold 'QUESTION EVERYTHING.' typographic statement, satirical subtitle, primary CTAs [SHOP THE DROP] and [EXPLORE THE SYSTEM], high-impact streetwear photo, and live system diagnostics badge."
+    },
+    {
+      "name": "LiveDropSection",
+      "path": "frontend/src/components/home/LiveDropSection.tsx",
+      "description": "4-item showcase grid for live drop items (SCAM DETECTED™, SYSTEM ERROR 404, UNDER PROCESS, TRUST THE PROCESS) with hover image flip, quick add drawer trigger, low stock meter, and limited badges."
+    },
+    {
+      "name": "CategorySystemNav",
+      "path": "frontend/src/components/home/CategorySystemNav.tsx",
+      "description": "Interactive category matrix for SCAMS, SYSTEM, INDIA, CORPORATE, LIMITED DROPS with distinct satirical visual cards, micro-interactions, and direct filter routing."
+    },
+    {
+      "name": "PendingOSTerminal",
+      "path": "frontend/src/components/home/PendingOSTerminal.tsx",
+      "description": "Interactive retro-futuristic PENDING OS v1.0 console with real-time typewriter diagnostics evaluating Accountability, Meetings, Jugaad, Indian Bureaucracy, and Traffic with user interaction buttons."
+    },
+    {
+      "name": "EditorialLookbookStrip",
+      "path": "frontend/src/components/home/EditorialLookbookStrip.tsx",
+      "description": "Immersive visual spread showcasing DROP 001 — WEAR THE CHAOS with street-level fashion imagery and brutalist layout."
+    },
+    {
+      "name": "ManifestoSection",
+      "path": "frontend/src/components/home/ManifestoSection.tsx",
+      "description": "High-contrast full-width black section with 'WE DON'T MAKE CLOTHES FOR EVERYONE.' manifesto, core pillars, and button to full manifesto page."
+    },
+    {
+      "name": "ArchiveSection",
+      "path": "frontend/src/components/home/ArchiveSection.tsx",
+      "description": "Brutalist archived system records for drops 001-004 marked SOLD OUT with historical timestamps."
+    },
+    {
+      "name": "NewsletterSection",
+      "path": "frontend/src/components/home/NewsletterSection.tsx",
+      "description": "'GET NOTIFIED BEFORE IT'S GONE.' newsletter signup box with instant satirical toast feedback."
+    },
+    {
+      "name": "CartDrawer",
+      "path": "frontend/src/components/cart/CartDrawer.tsx",
+      "description": "Slide-over cart sheet with dynamic item quantities, size/color details, free-shipping threshold bar (₹1,999 target), discount code mock ('JUGAAD10'), subtotal calculation in INR (₹), and proceed to checkout trigger."
+    },
+    {
+      "name": "SearchOverlay",
+      "path": "frontend/src/components/search/SearchOverlay.tsx",
+      "description": "Instant keyboard-accessible search modal with hot-key support ('/'), live keyword filtering, instant thumbnail results, and suggested queries ('Scam', 'Corporate', 'Error 404', 'Oversized Tee')."
+    },
+    {
+      "name": "ProductCard",
+      "path": "frontend/src/components/product/ProductCard.tsx",
+      "description": "Standardized streetwear product card with secondary image hover reveal, stock status badge, quick-add popover, wishlist toggle, and formatted INR pricing."
+    },
+    {
+      "name": "QuickAddModal",
+      "path": "frontend/src/components/product/QuickAddModal.tsx",
+      "description": "Fast size & color picker dialog triggered right from catalog cards without navigating away."
+    },
+    {
+      "name": "Footer",
+      "path": "frontend/src/components/layout/Footer.tsx",
+      "description": "Raw industrial footer with giant PENDING™ watermark typography, Indian manufacturing badge (MADE IN INDIA 2026), newsletter, customer service links, and satiric disclaimer."
+    }
+  ],
+  "mock_database_products": [
+    {
+      "id": "prod_001",
+      "slug": "scam-detected-tee",
+      "name": "SCAM DETECTED™ OVERSIZED TEE",
+      "category": "SCAMS",
+      "product_type": "Oversized T-shirts",
+      "price": 1799,
+      "original_price": 2499,
+      "gsm": 240,
+      "fit": "Heavyweight Boxy Oversized",
+      "color": "Washed Pitch Black",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "stock_status": "LOW STOCK (8 LEFT)",
+      "badge": "DROP 001 // BESTSELLER",
+      "tagline": "Certified authentic wear for people who know the email was phishing.",
+      "story": "Designed after our 47th lottery winning SMS from a Nigerian prince residing in Noida. 100% combed cotton, 0% refund eligibility from scam callers.",
+      "images": [
+        "https://images.unsplash.com/photo-1610502778270-c5c6f4c7d575?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_002",
+      "slug": "system-error-404-tee",
+      "name": "SYSTEM ERROR 404 HEAVY TEE",
+      "category": "SYSTEM",
+      "product_type": "Oversized T-shirts",
+      "price": 1799,
+      "original_price": 2299,
+      "gsm": 240,
+      "fit": "Drop Shoulder Relaxed",
+      "color": "Off-White Raw Ecru",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock_status": "IN STOCK",
+      "badge": "CORE SYSTEM",
+      "tagline": "Accountability not found. Please refresh your browser or change country.",
+      "story": "In honour of every government portal that stops functioning at 2:00 PM for lunch break until 2029.",
+      "images": [
+        "https://images.unsplash.com/photo-1635650804263-1a1941e14df5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1635650804060-bb009bcb2ea5?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_003",
+      "slug": "under-process-tee",
+      "name": "UNDER PROCESS™ VINTAGE TEE",
+      "category": "CORPORATE",
+      "product_type": "Regular T-shirts",
+      "price": 1699,
+      "original_price": 1999,
+      "gsm": 220,
+      "fit": "Standard Street Cut",
+      "color": "Charcoal Slate",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "stock_status": "RUNNING LOW",
+      "badge": "CORPORATE SATIRE",
+      "tagline": "Currently sitting in an HR inbox pending three levels of management approval.",
+      "story": "Your appraisal is under process. Your leave is under process. This shirt was processed with extreme prejudice.",
+      "images": [
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1726140872004-850c80900ae3?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_004",
+      "slug": "trust-the-process-hoodie",
+      "name": "TRUST THE PROCESS™ 400 GSM HOODIE",
+      "category": "LIMITED DROPS",
+      "product_type": "Hoodies",
+      "price": 3299,
+      "original_price": 3999,
+      "gsm": 400,
+      "fit": "Ultra Heavyweight Oversized",
+      "color": "Deep Obsidian",
+      "sizes": ["S", "M", "L", "XL"],
+      "stock_status": "LIMITED (12 UNITS LEFT)",
+      "badge": "LIMITED DROP // 100 PIECES",
+      "tagline": "The process doesn't trust you, but you should still trust the process.",
+      "story": "400 GSM French Terry heavyweight knit engineered to keep you warm while your startup burns through seed funding.",
+      "images": [
+        "https://images.unsplash.com/photo-1660486044177-45cd45bb5e99?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1654228470907-58c80365d7a5?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_005",
+      "slug": "per-my-last-email-tee",
+      "name": "PER MY LAST EMAIL™ ACID TEE",
+      "category": "CORPORATE",
+      "product_type": "Oversized T-shirts",
+      "price": 1799,
+      "original_price": 2299,
+      "gsm": 240,
+      "fit": "Boxy Cut",
+      "color": "Acid Wash Black",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock_status": "IN STOCK",
+      "badge": "OFFICE WEAPONRY",
+      "tagline": "Corporate slang for 'Can you actually read, or should I make a slide deck?'",
+      "story": "The polite way of saying 'I already told you this yesterday, Rohit.'",
+      "images": [
+        "https://images.unsplash.com/photo-1785414671269-6201c3daf7c8?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1785414671439-e220425de0e5?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_006",
+      "slug": "jugaad-certified-cap",
+      "name": "JUGAAD CERTIFIED™ EMBROIDERED CAP",
+      "category": "INDIA",
+      "product_type": "Caps",
+      "price": 1199,
+      "original_price": 1499,
+      "gsm": 0,
+      "fit": "Structured 6-Panel Strapback",
+      "color": "Midnight Black / Acid Thread",
+      "sizes": ["ONE SIZE"],
+      "stock_status": "IN STOCK",
+      "badge": "CULTURAL ICON",
+      "tagline": "Fixing complex geopolitical problems with duct tape and audacity.",
+      "story": "Tested rigorously on ceiling fans tied with wire and mopeds carrying 5 people.",
+      "images": [
+        "https://images.unsplash.com/photo-1647547844452-3abd77700ac1?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1721637686340-de9f8cebda5a?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_007",
+      "slug": "100-percent-genuine-tote",
+      "name": "100% GENUINE™ HEAVY CANVAS TOTE",
+      "category": "SCAMS",
+      "product_type": "Tote bags",
+      "price": 899,
+      "original_price": 1199,
+      "gsm": 380,
+      "fit": "Reinforced Gusset Tote",
+      "color": "Natural Raw Cotton",
+      "sizes": ["ONE SIZE"],
+      "stock_status": "IN STOCK",
+      "badge": "PALIKA BAZAAR ARCHIVE",
+      "tagline": "Carries your laptop, water bottle, and emotional baggage with zero authenticity certificate.",
+      "story": "Inspired by the underground market stalls selling 100% genuine fake sneakers since 1994.",
+      "images": [
+        "https://images.unsplash.com/photo-1610502778270-c5c6f4c7d575?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_008",
+      "slug": "let-me-circle-back-tee",
+      "name": "LET ME CIRCLE BACK™ TEE",
+      "category": "CORPORATE",
+      "product_type": "Oversized T-shirts",
+      "price": 1799,
+      "original_price": 2399,
+      "gsm": 240,
+      "fit": "Oversized Relaxed",
+      "color": "Washed Chalk White",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock_status": "IN STOCK",
+      "badge": "SYNERGY SERIES",
+      "tagline": "Narrator: He never circled back.",
+      "story": "The universal escape hatch for any meeting where nobody did their homework.",
+      "images": [
+        "https://images.unsplash.com/photo-1635650804060-bb009bcb2ea5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1635650804263-1a1941e14df5?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_009",
+      "slug": "server-down-poster-pack",
+      "name": "SERVER DOWN // SYSTEM CRASH POSTER SET",
+      "category": "SYSTEM",
+      "product_type": "Posters",
+      "price": 699,
+      "original_price": 999,
+      "gsm": 300,
+      "fit": "A2 Archival Matte Print (Set of 3)",
+      "color": "High Contrast Black/Acid",
+      "sizes": ["A2"],
+      "stock_status": "IN STOCK",
+      "badge": "PRINT ARCHIVE",
+      "tagline": "Museum quality prints for your desk so everyone knows you are technically unresponsive.",
+      "story": "Printed on heavyweight matte paper with anti-hope protective coating.",
+      "images": [
+        "https://images.unsplash.com/photo-1785414671439-e220425de0e5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1785414671269-6201c3daf7c8?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_010",
+      "slug": "bureaucracy-sticker-pack",
+      "name": "RED TAPE & BUREAUCRACY STICKER PACK",
+      "category": "INDIA",
+      "product_type": "Sticker packs",
+      "price": 399,
+      "original_price": 599,
+      "gsm": 0,
+      "fit": "Die-Cut Vinyl (Pack of 12)",
+      "color": "Multi Gloss & Holographic",
+      "sizes": ["PACK OF 12"],
+      "stock_status": "IN STOCK",
+      "badge": "ACCESSORY",
+      "tagline": "Stick on your MacBook to intimidate venture capitalists and government clerks.",
+      "story": "Waterproof, UV-resistant, and 100% resistant to logical arguments.",
+      "images": [
+        "https://images.unsplash.com/photo-1721637686340-de9f8cebda5a?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1647547844452-3abd77700ac1?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_011",
+      "slug": "server-load-limited-hoodie",
+      "name": "SERVER LOAD: 99% HEAVY HOODIE",
+      "category": "LIMITED DROPS",
+      "product_type": "Hoodies",
+      "price": 3499,
+      "original_price": 4299,
+      "gsm": 400,
+      "fit": "Custom Boxy Drop Shoulder",
+      "color": "Charcoal Smog",
+      "sizes": ["M", "L", "XL"],
+      "stock_status": "SOLD OUT",
+      "badge": "ARCHIVED DROP // SOLD OUT",
+      "tagline": "One more request and the entire country goes back to pen and paper.",
+      "story": "Sold out in 4 minutes during the monsoon drop. Displayed for archival glory.",
+      "images": [
+        "https://images.unsplash.com/photo-1654228470907-58c80365d7a5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1660486044177-45cd45bb5e99?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_012",
+      "slug": "lunch-break-heavy-tee",
+      "name": "LUNCH KE BAAD AANA™ OVERSIZED TEE",
+      "category": "INDIA",
+      "product_type": "Oversized T-shirts",
+      "price": 1799,
+      "original_price": 2299,
+      "gsm": 240,
+      "fit": "Ultra Boxy Cut",
+      "color": "Vintage Sand Beige",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock_status": "IN STOCK",
+      "badge": "NATIONAL ANTHEM",
+      "tagline": "The sacred 6-hour midday interval of Indian public administration.",
+      "story": "Counter 4 will open at 3:30 PM. Please take token number 842 and sit on the broken plastic chair.",
+      "images": [
+        "https://images.unsplash.com/photo-1635650804263-1a1941e14df5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_013",
+      "slug": "funded-unprofitable-tee",
+      "name": "SERIES A // UNPROFITABLE™ TEE",
+      "category": "CORPORATE",
+      "product_type": "Oversized T-shirts",
+      "price": 1799,
+      "original_price": 2399,
+      "gsm": 240,
+      "fit": "Heavyweight Streetwear",
+      "color": "Obsidian Black",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "stock_status": "IN STOCK",
+      "badge": "BLR TECH CORRIDOR",
+      "tagline": "Burning $2M a month to deliver one samosa in 7 minutes.",
+      "story": "Dedicated to Koramangala and Indiranagar coffee shop strategists building AI for chai stalls.",
+      "images": [
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1726140872004-850c80900ae3?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_014",
+      "slug": "aadhaar-link-karo-tee",
+      "name": "LINK YOUR AADHAAR™ ACID TEE",
+      "category": "SYSTEM",
+      "product_type": "Regular T-shirts",
+      "price": 1699,
+      "original_price": 2199,
+      "gsm": 220,
+      "fit": "Relaxed Regular",
+      "color": "Washed Charcoal",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock_status": "IN STOCK",
+      "badge": "MANDATORY WARNING",
+      "tagline": "Link your biometrics to buy this shirt. Just kidding, or are we?",
+      "story": "Before breathing, please provide 12-digit UIDAI verification and OTP sent to disconnected phone number.",
+      "images": [
+        "https://images.unsplash.com/photo-1610502778270-c5c6f4c7d575?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1660486044177-45cd45bb5e99?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    {
+      "id": "prod_015",
+      "slug": "broken-promise-tote",
+      "name": "MANIFESTO // BROKEN PROMISES TOTE",
+      "category": "LIMITED DROPS",
+      "product_type": "Tote bags",
+      "price": 999,
+      "original_price": 1299,
+      "gsm": 420,
+      "fit": "Heavy Duty Industrial Canvas",
+      "color": "Washed Jet Black",
+      "sizes": ["ONE SIZE"],
+      "stock_status": "LOW STOCK (4 LEFT)",
+      "badge": "LIMITED DROP",
+      "tagline": "Guaranteed to carry 25kg of unfulfilled political guarantees.",
+      "story": "Screen-printed by hand in Mumbai. Features stamped serial numbers 001 through 150.",
+      "images": [
+        "https://images.unsplash.com/photo-1785414671269-6201c3daf7c8?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1647547844452-3abd77700ac1?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    }
+  ],
+  "image_urls": {
+    "hero_editorial": "https://images.unsplash.com/photo-1654228470907-58c80365d7a5?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "lookbook_shots": [
+      {
+        "url": "https://images.unsplash.com/photo-1654228470907-58c80365d7a5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "title": "SHOT 001 // BRUTALIST ROOFTOPS",
+        "meta": "MUMBAI ARCHIVE / 35MM / EXP: 01"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1785414671269-6201c3daf7c8?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "title": "SHOT 002 // SUBWAY ELEVATION",
+        "meta": "DELHI CORRIDOR / 50MM / EXP: 02"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1721637686340-de9f8cebda5a?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "title": "SHOT 003 // NEON BUREAUCRACY",
+        "meta": "BANGALORE GRID / 28MM / EXP: 03"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1660486044177-45cd45bb5e99?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "title": "SHOT 004 // MIDNIGHT JUGAAD",
+        "meta": "CHANDIGARH SECTOR / 35MM / EXP: 04"
+      }
+    ],
+    "apparel_models": [
+      "https://images.unsplash.com/photo-1635650804263-1a1941e14df5?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1635650804060-bb009bcb2ea5?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1726140872004-850c80900ae3?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ],
+    "apparel_flatlays": [
+      "https://images.unsplash.com/photo-1610502778270-c5c6f4c7d575?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ]
+  },
+  "motion": {
+    "engine": "motion/react",
+    "spring_presets": {
+      "tactical_quick": { "type": "spring", "stiffness": 400, "damping": 30 },
+      "editorial_reveal": { "duration": 0.6, "ease": [0.16, 1, 0.3, 1] },
+      "drawer_slide": { "type": "spring", "stiffness": 300, "damping": 35 }
+    },
+    "effects": {
+      "product_hover_zoom": "scale-105 transition-transform duration-500 ease-out",
+      "button_press": "active:translate-y-0.5 active:shadow-none transition-all",
+      "ticker_scroll": "continuous smooth marquee with pauseOnHover",
+      "terminal_typewriter": "staggered character typing with blinking block cursor"
+    }
+  },
+  "accessibility": {
+    "contrast_target": "WCAG AA (>= 4.5:1 text, >= 3:1 graphical)",
+    "data_testids": "Strict role-based kebab-case testing attributes on every interactable",
+    "keyboard_navigation": "Full focus-visible styling with ring-2 ring-[#E52A1B] or ring-[#D9FF32]",
+    "reduced_motion": "Supports prefers-reduced-motion by bypassing transform animations"
+  },
+  "instructions_to_main_agent": [
+    "Template is farm-ts: FastAPI backend at backend/ (proxy at /api), Vite + React 19 frontend at frontend/src/.",
+    "Import fonts in frontend/src/index.css via @import '@fontsource-variable/space-grotesk'; @import '@fontsource-variable/dm-sans'; @import '@fontsource-variable/jetbrains-mono';",
+    "Use INR currency format (e.g., ₹1,799, ₹1,999) with Indian numbering conventions.",
+    "Persist cart and wishlist in browser localStorage with demo state hydrated from the 15 mock products.",
+    "Implement rich interactive features: Cart drawer with free shipping progress bar (target ₹1,999), instant search modal with keyboard shortcut '/' and live debounced results, quick size select popup, lookbook viewer with image inspection, interactive PENDING OS v1.0 diagnostic simulator with real-time logging, and interactive checkout mock with UPI/QR tabs and order confirmation invoice.",
+    "Ensure all interactive items have rigorous data-testid attributes (e.g., data-testid='add-to-bag-button', data-testid='cart-drawer-toggle', data-testid='search-input', data-testid='checkout-button', data-testid='filter-category-scams').",
+    "Maintain the uncompromising high-fashion streetwear feel: sharp borders, neo-brutalist grids, aggressive typography, witty satire copy on Indian systems, scams, HR culture, and bureaucracy."
+  ]
+}
